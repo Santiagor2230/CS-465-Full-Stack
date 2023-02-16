@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-//import { trips } from '../data/trips';
+//import { trips } from "../data/trips";
 import { TripDataService } from "../services/trip-data.service";
 import { Trip } from "../models/trip";
 
@@ -23,7 +23,7 @@ export class TripListingComponent implements OnInit {
 
   private addTrip(): void {
     console.log("Inside TripListingComponent#addTrip");
-    this.router.navigate(["add_trip"]);
+    this.router.navigate(["add-trip"]);
   }
 
   private getTrips(): void {

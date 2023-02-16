@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const model = mongoose.model("trips");
 
 const tripsUpdateTrip = async (req, res) => {
-  console.log(red.body);
+  console.log(req.body);
   model
     .findOneAndUpdate(
       { code: req.params.tripCode },
@@ -13,7 +13,7 @@ const tripsUpdateTrip = async (req, res) => {
         start: req.body.start,
         resort: req.body.resort,
         perPerson: req.body.perPerson,
-        image: req.boyd.image,
+        image: req.body.image,
         description: req.body.description,
       },
       { new: true }

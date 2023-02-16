@@ -17,7 +17,6 @@ export class EditTripComponent implements OnInit {
     private router: Router,
     private tripService: TripDataService
   ) {}
-
   ngOnInit() {
     // retrieve stashed tripId
     let tripCode = localStorage.getItem("tripCode");
@@ -27,7 +26,6 @@ export class EditTripComponent implements OnInit {
       return;
     }
     console.log("EditTripComponent#onInit found tripCode " + tripCode);
-
     // initialize form
     this.editForm = this.formBuilder.group({
       _id: [],
@@ -51,7 +49,6 @@ export class EditTripComponent implements OnInit {
       this.editForm.patchValue(data[0]);
     });
   }
-
   onSubmit() {
     this.submitted = true;
     if (this.editForm.valid) {
